@@ -7,8 +7,6 @@ import { HttpService } from 'src/app/services/http/http.service';
 	providedIn: 'root'
 })
 export class EventsService {
-	projectId: string = this.privateService.activeProjectDetails.uid;
-
 	constructor(private http: HttpService, private privateService: PrivateService) {}
 
 	async getEvents(requestDetails: { pageNo: number; startDate: string; endDate: string; appId: string; query?: string }): Promise<HTTP_RESPONSE> {
